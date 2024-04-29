@@ -1,6 +1,6 @@
 #! /usr/bin/env node
 import inquirer from "inquirer";
-let number = 25;
+let number = 18;
 let answer = await inquirer.prompt({
     name: "age",
     type: "number",
@@ -20,4 +20,12 @@ let Answer = await inquirer.prompt([
         choices: ["python", "typescript", "C++", "SQL"],
     }
 ]);
-console.log("Congratulations! you are eligible and selected in this course.");
+if (answer.age < number) {
+    console.log("You are under age.");
+}
+else if (answer.age > number) {
+    console.log("Congratulations! You are eligible and selected in this course.");
+}
+else if (answer.age === number) {
+    console.log("Congratulations! You are eligible and selected in this course.");
+}

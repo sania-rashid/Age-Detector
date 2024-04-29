@@ -19,4 +19,11 @@ let Answer = await inquirer.prompt([
   type: "list",
   choices: ["python", "typescript", "C++", "SQL"],
 }])
-console.log("Congratulations! you are eligible and selected in this course.")
+if (answer.age < number){
+    console.log("You are under age.")
+}else if (answer.age > number){
+    console.log("Congratulations! You are eligible and selected in this course.")
+}else if (answer.age === number){
+    console.log("Congratulations! You are eligible and selected in this course.")
+}
+    
